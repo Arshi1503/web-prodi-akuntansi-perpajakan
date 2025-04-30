@@ -38,11 +38,11 @@
         </svg>
     </div>
     
+    @include('partials.navbar')
     <main class="tw-opacity-0 tw-transition-opacity tw-duration-300">
-        @include('partials.navbar')
         @yield('content')
-        @include('partials.footer')
     </main>
+    @include('partials.footer')
 
 
      <!-- start scroll progress -->

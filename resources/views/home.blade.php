@@ -191,6 +191,39 @@
             </div>
         </section>
         <!-- end section -->
+        {{-- start section --}}
+        <section class="pt-0 big-section tw-my-20">
+            <div class="container">
+                <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3> 
+                        <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
+                            <p>Assalamu'alaikum warahmatullahi wabarakatuh,</p>
+                            <p>Salam sejahtera untuk kita semua.</p>
+                            <p>Selamat datang di website resmi Program Studi Akuntansi Perpajakan. Website ini kami hadirkan sebagai media informasi dan komunikasi yang memuat berbagai hal terkait aktivitas akademik, program unggulan, serta capaian prestasi dari mahasiswa maupun dosen kami.</p>
+                            <p>Program Studi Akuntansi Perpajakan hadir sebagai jawaban atas kebutuhan dunia kerja terhadap tenaga profesional yang memiliki kompetensi di bidang akuntansi dan perpajakan. Melalui kurikulum yang adaptif dan pembelajaran berbasis praktik, kami berkomitmen mencetak lulusan yang tidak hanya cakap secara akademik, namun juga siap bersaing secara profesional di era industri 4.0.</p>
+                            <p>Kami berharap website ini dapat memberikan gambaran yang jelas bagi calon mahasiswa, orang tua, maupun masyarakat umum mengenai profil dan keunggulan yang dimiliki program studi kami.</p>
+                            <p>Akhir kata, kami ucapkan terima kasih atas kunjungan Anda. Semoga informasi yang kami sajikan bermanfaat dan menjadi jembatan untuk menjalin silaturahmi yang lebih luas.</p>
+                            <p>Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
+                            <p class="tw-font-semibold tw-mt-6">Ketua Program Studi Akuntansi Perpajakan</p>
+                        </div>
+                        
+                        <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-7">
+                            Selengkapnya
+                            <span class="bg-orient-blue text-white">
+                                <i class="feather icon-feather-arrow-right icon-small"></i>
+                            </span>
+                        </a>                        
+                    </div>
+                    <div class="col-lg-6 position-relative md-mt-14 sm-mt-17 xs-mt-23"> 
+                        <div class="w-70 md-w-75 xs-w-90" data-animation-delay="50" data-shadow-animation="true">
+                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class="border-radius-8px w-100">
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </section>  
+        {{-- end section  --}}
         <!-- start section --> 
         <section class="pt-md-0">
             <div class="container overlap-section">
