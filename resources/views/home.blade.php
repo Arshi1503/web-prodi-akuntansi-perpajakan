@@ -216,8 +216,8 @@
                         </a>                        
                     </div>
                     <div class="col-lg-6 position-relative md-mt-14 sm-mt-17 xs-mt-23"> 
-                        <div class="w-70 md-w-75 xs-w-90" data-animation-delay="50" data-shadow-animation="true">
-                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class="border-radius-8px w-100">
+                        <div class="w-70 md-w-75 xs-w-90 tw-ml-32" data-animation-delay="50" data-shadow-animation="true">
+                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px w-100">
                         </div>
                     </div> 
                 </div> 
