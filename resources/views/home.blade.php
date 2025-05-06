@@ -18,11 +18,11 @@
         <section> 
             <div class="container">  
                 <div class="row justify-content-center mb-3">
-                    <div class="col-lg-7 col-md-8 col-sm-9 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="col-lg-7 text-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                         <h3 class="text-dark-gray fw-700 ls-minus-2px">Mengapa memilih akuntansi perpajakan?</h3>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center mb-5" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-1 justify-content-center mb-5" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <!-- start features box item -->
                     <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px">
                         <div class="bg-very-light-gray h-100 justify-content-end feature-box flex-column-reverse p-15 md-p-13 border-radius-8px">
@@ -182,11 +182,17 @@
                             <!-- end process step item --> 
                         </div>  
                     </div> 
-                    <div class="col-lg-6 text-center md-mb-20px offset-xl-1"> 
+                    <div class="col-lg-6 text-center md-mb-20px offset-xl-1 tw-hidden lg:tw-block"> 
                         <figure class="position-relative mb-0 overflow-hidden" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)"> 
                             <img src="{{ asset('images/gambar/hero.jpg') }}" class="w-100 border-radius-6px" alt=""> 
                         </figure>
                     </div>
+                    <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
+                        Selengkapnya
+                        <span class="bg-orient-blue text-white">
+                            <i class="feather icon-feather-arrow-right icon-small"></i>
+                        </span>
+                    </a>  
                 </div>
             </div>
         </section>
@@ -198,35 +204,29 @@
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
                         <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3> 
                         <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
-                            <p>Assalamu'alaikum warahmatullahi wabarakatuh,</p>
-                            <p>Salam sejahtera untuk kita semua.</p>
                             <p>Selamat datang di website resmi Program Studi Akuntansi Perpajakan. Website ini kami hadirkan sebagai media informasi dan komunikasi yang memuat berbagai hal terkait aktivitas akademik, program unggulan, serta capaian prestasi dari mahasiswa maupun dosen kami.</p>
                             <p>Program Studi Akuntansi Perpajakan hadir sebagai jawaban atas kebutuhan dunia kerja terhadap tenaga profesional yang memiliki kompetensi di bidang akuntansi dan perpajakan. Melalui kurikulum yang adaptif dan pembelajaran berbasis praktik, kami berkomitmen mencetak lulusan yang tidak hanya cakap secara akademik, namun juga siap bersaing secara profesional di era industri 4.0.</p>
-                            <p>Kami berharap website ini dapat memberikan gambaran yang jelas bagi calon mahasiswa, orang tua, maupun masyarakat umum mengenai profil dan keunggulan yang dimiliki program studi kami.</p>
-                            <p>Akhir kata, kami ucapkan terima kasih atas kunjungan Anda. Semoga informasi yang kami sajikan bermanfaat dan menjadi jembatan untuk menjalin silaturahmi yang lebih luas.</p>
-                            <p>Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
                             <p class="tw-font-semibold tw-mt-6">Ketua Program Studi Akuntansi Perpajakan</p>
-                        </div>
-                        
-                        <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-7">
-                            Selengkapnya
-                            <span class="bg-orient-blue text-white">
-                                <i class="feather icon-feather-arrow-right icon-small"></i>
-                            </span>
-                        </a>                        
+                        </div>                     
                     </div>
-                    <div class="col-lg-6 position-relative md-mt-14 sm-mt-17 xs-mt-23"> 
-                        <div class="w-70 md-w-75 xs-w-90 tw-ml-32" data-animation-delay="50" data-shadow-animation="true">
+                    <div class="col-lg-6 position-relative md-my-14 sm-my-17 xs-my-23"> 
+                        <div class="w-70 md-w-75 xs-w-90 md:tw-ml-32 tw-my-10 tw-ml-6" data-animation-delay="50" data-shadow-animation="true">
                             <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px w-100">
                         </div>
                     </div> 
+                    <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-10 lg:tw-ml-[7rem]">
+                        Selengkapnya
+                        <span class="bg-orient-blue text-white">
+                            <i class="feather icon-feather-arrow-right icon-small"></i>
+                        </span>
+                    </a>   
                 </div> 
             </div>
         </section>  
         {{-- end section  --}}
         <!-- start section --> 
         <section class="pt-md-0">
-            <div class="container overlap-section">
+            <div class="container overlap-section md:!tw-mt-0">
                 <div class="row m-0 align-items-center justify-content-center bg-white border-radius-100px md-border-radius-6px ps-10px pe-10px box-shadow-quadruple-large appear anime-complete" data-anime='{ "scale": [1.1, 1], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>                    
                     <div class="col-lg-10">
                         <div class="swiper slider-one-slide testimonials-style-09" data-slider-options='{ "slidesPerView": 1, "loop": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
@@ -235,7 +235,7 @@
                                 <div class="swiper-slide">
                                     <div class="row align-items-center pt-25px pb-25px"> 
                                         <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start">
-                                            <img src="{{asset('images/gambar/alumni2.jpg')}}" class="rounded-circle w-100px h-100px md-mb-35px" alt="">  
+                                            <img src="{{asset('images/gambar/alumni2.jpg')}}" class="rounded-circle w-100px h-100px md-mb-35px tw-mx-auto" alt="">  
                                             <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">“Saya bangga menjadi bagian dari alumni prodi ini. Selain ilmu akuntansi yang kuat, saya juga dibekali pemahaman perpajakan yang sangat relevan dengan kebutuhan industri saat ini.”</span>
                                         </div>
                                         <div class="col-lg-1 d-none d-lg-inline-block">
@@ -252,7 +252,7 @@
                                 <div class="swiper-slide">
                                     <div class="row align-items-center pt-25px pb-25px"> 
                                         <div class="col-lg-8 d-lg-flex align-items-center text-center text-lg-start"> 
-                                            <img src="{{asset('images/gambar/alumni2.jpg')}}" class="rounded-circle w-100px h-100px md-mb-35px" alt="">
+                                            <img src="{{asset('images/gambar/alumni2.jpg')}}" class="rounded-circle w-100px h-100px md-mb-35px tw-mx-auto" alt="">
                                             <span class="d-block ps-40px md-ps-0 md-mx-auto position-relative"><img src="images/demo-accounting-home-quote-img.png" class="position-absolute left-minus-25px top-minus-15px lg-top-minus-5px md-top-minus-50px w-40px md-left-0px md-right-0px md-mx-auto" alt="">“Selama kuliah, saya mendapatkan pengalaman belajar yang sangat lengkap — mulai dari teori, praktik, hingga pelatihan software perpajakan. Ini sangat membantu saya dalam proses seleksi CPNS.</span>
                                         </div>
                                         <div class="col-lg-1 d-none d-lg-inline-block">

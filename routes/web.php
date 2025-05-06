@@ -29,10 +29,6 @@ use App\Http\Controllers\PersyaratanMasukController;
 */
 
 Route::get('/', function () {
-    return view('beranda');
-});
-
-Route::get('/test', function (){
     return view('home');
 });
 
