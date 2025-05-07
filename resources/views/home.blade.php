@@ -74,14 +74,24 @@
                         <div class="w-70 md-w-75 xs-w-90" data-animation-delay="50" data-shadow-animation="true">
                             <img src="{{ asset('images/gambar/hero.jpg') }}" alt="" class="border-radius-8px w-100">
                         </div>
+                        {{-- Tambahkan Gambar hero dan small hero dibackend --}}
+                        {{-- <div class="w-70 md-w-75 xs-w-90" data-animation-delay="50" data-shadow-animation="true">
+                            <img src="{{ asset('images/gambar/hero.jpg') }}" alt="" class="border-radius-8px w-100">
+                        </div> --}}
+                        {{-- <div class="w-55 overflow-hidden position-absolute right-15px xs-w-60 bottom-minus-20px" data-shadow-animation="true" data-animation-delay="250" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
+                            <img src="{{ asset('images/gambar/small-hero.jpg') }}" alt="" class="border-radius-8px w-100 box-shadow-quadruple-large" />
+                        </div> --}}
                         <div class="w-55 overflow-hidden position-absolute right-15px xs-w-60 bottom-minus-20px" data-shadow-animation="true" data-animation-delay="250" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
                             <img src="{{ asset('images/gambar/small-hero.jpg') }}" alt="" class="border-radius-8px w-100 box-shadow-quadruple-large" />
                         </div>
                     </div> 
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
-                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Apa Sih Akuntansi Perpajakan Itu?</h3> 
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Apa Sih Akuntansi Perpajakan Itu?</h3>
+                        {{-- @if ($tentang && $tentang->deskripsi)
+                        <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">{!! $tentang->deskripsi !!}</p>     
+                        @endif  --}}
                         <p class="mb-40px xs-mb-30px w-90 lg-w-95 md-w-100">Akuntansi Perpajakan itu jurusan buat kamu yang pengen jago ngatur duit dan ngerti dunia pajak dari A sampai Z. Di sini kamu bakal belajar gimana cara nyusun laporan keuangan yang rapi, ngitung pajak perusahaan, sampai ngerti aturan perpajakan di Indonesia. Cocok banget buat kamu yang pengen kerja di kantor pajak, perusahaan, atau bahkan buka jasa konsultan sendiri. Keren, kan?</p> 
-                        <div class="row align-items-center mb-30px justify-content-center justify-content-lg-start">
+                        {{-- <div class="row align-items-center mb-30px justify-content-center justify-content-lg-start">
                             <!-- Mahasiswa Aktif -->
                             <div class="col-lg-5 col-md-4 col-sm-5 counter-style-04 mb-3">
                                 <h3 class="vertical-counter d-inline-flex fw-700 text-dark-gray mb-0" data-text="+" data-to="60">
@@ -97,7 +107,7 @@
                                 </h3>
                                 <span class="fw-500 text-dark-gray d-block">Alumni di Bidang Pajak</span>
                             </div>
-                        </div>
+                        </div> --}}
                         <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
                             Selengkapnya
                             <span class="bg-orient-blue text-white">
@@ -142,6 +152,9 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-40px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Visi</span>
+                                        {{-- @if ($visiMisiTujuan && $visiMisiTujuan->visi)
+                                        <p class="w-90 sm-w-100">{!! $visiMisiTujuan->visi !!}</p> 
+                                        @endif --}}
                                         <p class="w-90 sm-w-100">Menjadi Program Studi unggulan dalam bidang akuntansi dan perpajakan yang profesional, berintegritas, dan adaptif terhadap perkembangan teknologi serta kebutuhan dunia kerja di tingkat nasional.</p>
                                     </div>
                                 </div> 
@@ -159,6 +172,9 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-40px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Misi</span>
+                                        {{-- @if ($visiMisiTujuan->misi)
+                                        <p class="w-90 sm-w-100">{!! $visiMisiTujuan->misi !!}</p>
+                                        @endif --}}
                                         <p class="w-90 sm-w-100">Menyelenggarakan pendidikan di bidang akuntansi dan perpajakan yang berbasis kompetensi dan teknologi terkini.</p>
                                     </div>
                                 </div> 
@@ -175,13 +191,17 @@
                                     </div>
                                     <div class="process-content ps-35px sm-ps-25px last-paragraph-no-margin mb-30px">
                                         <span class="d-block fw-600 text-dark-gray fs-17 mb-5px">Tujuan</span>
+                                        {{-- @if ($visiMisiTujuan->tujuan)
+                                        <p class="w-90 sm-w-100">{!! $visiMisiTujuan->tujuan !!}</p>
+                                        @endif --}}
                                         <p class="w-90 sm-w-100">Mendorong terciptanya inovasi dan solusi praktis melalui kegiatan penelitian dan pengabdian masyarakat.</p>
                                     </div>
                                 </div> 
                             </div>
                             <!-- end process step item --> 
                         </div>  
-                    </div> 
+                    </div>
+                    {{-- Tambahkan foto untuk hero dibackend --}}
                     <div class="col-lg-6 text-center md-mb-20px offset-xl-1 tw-hidden lg:tw-block"> 
                         <figure class="position-relative mb-0 overflow-hidden" data-shadow-animation="true" data-bottom-top="transform: translateY(70px)" data-top-bottom="transform: translateY(-70px)"> 
                             <img src="{{ asset('images/gambar/hero.jpg') }}" class="w-100 border-radius-6px" alt=""> 
@@ -202,14 +222,24 @@
             <div class="container">
                 <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
-                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3> 
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3>
+                        {{-- @if ($pimpinanStaff && $pimpinanStaff->kata_sambutan)
+                        <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
+                            <p>{!! $pimpinanStaff->kata_sambutan !!}</p>
+                            <p class="tw-font-semibold tw-mt-6">{{ $pimpinanStaff->nama }}, {{ $pimpinanStaff->status }}</p>
+                        </div>      
+                        @endif--}}
                         <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
                             <p>Selamat datang di website resmi Program Studi Akuntansi Perpajakan. Website ini kami hadirkan sebagai media informasi dan komunikasi yang memuat berbagai hal terkait aktivitas akademik, program unggulan, serta capaian prestasi dari mahasiswa maupun dosen kami.</p>
                             <p>Program Studi Akuntansi Perpajakan hadir sebagai jawaban atas kebutuhan dunia kerja terhadap tenaga profesional yang memiliki kompetensi di bidang akuntansi dan perpajakan. Melalui kurikulum yang adaptif dan pembelajaran berbasis praktik, kami berkomitmen mencetak lulusan yang tidak hanya cakap secara akademik, namun juga siap bersaing secara profesional di era industri 4.0.</p>
-                            <p class="tw-font-semibold tw-mt-6">Ketua Program Studi Akuntansi Perpajakan</p>
                         </div>                     
                     </div>
-                    <div class="col-lg-6 position-relative md-my-14 sm-my-17 xs-my-23"> 
+                    <div class="col-lg-6 position-relative md-my-14 sm-my-17 xs-my-23">
+                        {{-- @if ($pimpinanStaff && $pimpinanStaff->foto)
+                        <div class="w-70 md-w-75 xs-w-90 md:tw-ml-32 tw-my-10 tw-ml-6" data-animation-delay="50" data-shadow-animation="true">
+                            <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="" class=" border-radius-8px w-100">
+                        </div>
+                        @endif --}}
                         <div class="w-70 md-w-75 xs-w-90 md:tw-ml-32 tw-my-10 tw-ml-6" data-animation-delay="50" data-shadow-animation="true">
                             <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px w-100">
                         </div>
@@ -295,6 +325,41 @@
                         <ul class="blog-grid blog-wrapper grid-loading grid grid-3col xl-grid-3col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                             <li class="grid-sizer"></li>
                             <!-- start blog list -->
+                        {{-- @foreach ($publikasi->where('status', 'Berita')->sortByDesc('waktu')->take(3) as $item)
+                        <li class="grid-item">
+                            <div class="card border-0 border-radius-5px box-shadow-quadruple-large box-shadow-quadruple-large-hover" style="min-height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div class="blog-image" style="height: 200px; overflow: hidden;">
+                                    @if ($item->gambar)
+                                    <a href="{{ route('detail-berita', ['id' => $item->id]) }}'" class="d-block">
+                                        <img src="{{ asset('storage/' . $item->gambar) }}" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+                                    </a>
+                                    @endif
+                                </div>
+                                <div class="card-body p-12 lg-p-10" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 0;">
+                                    @if ($item->judul)
+                                    <a href="{{ route('detail-berita', ['id' => $item->id]) }}'" 
+                                    class="card-title mb-3 fw-600 fs-20 text-dark-gray d-inline-block" 
+                                    style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">
+                                        {!! Str::limit($item->judul, 90) !!}
+                                    </a>
+                                    @endif
+                                    @if ($item->deskripsi)
+                                    <p style="margin-top: 5px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                                        {!! Str::limit($item->deskripsi, 120) !!}
+                                    </p>
+                                    @endif
+                                    <div class="d-flex justify-content-center align-items-center position-relative overflow-hidden fs-14 text-uppercase mt-auto">
+                                        <div class="me-auto">
+                                            @if ($item->waktu)
+                                            <span class="blog-date d-inline-block fw-600 text-dark-gray">
+                                                {{ \Carbon\Carbon::parse($item->waktu)->translatedFormat('d F Y') }}
+                                            </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> --}}
                             <li class="grid-item">
                                 <div class="card border-0 border-radius-5px box-shadow-quadruple-large box-shadow-quadruple-large-hover" style="min-height: 450px; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div class="blog-image" style="height: 200px; overflow: hidden;">

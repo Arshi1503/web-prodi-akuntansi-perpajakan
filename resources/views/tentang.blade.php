@@ -25,6 +25,9 @@
                             <h2 class="tw-text-3xl tw-font-bold tw-text-primary tw-mb-4">
                                 Apa itu Akuntansi Perpajakan?
                             </h2>
+                            {{-- @if ($tentang && $tentang->deskripsi)
+                                <p class="tw-text-base tw-text-gray-700">{!! $tentang->deskripsi !!}"></p>
+                            @endif --}}
                             <p class="tw-text-base tw-text-gray-700">
                                 Program Studi Akuntansi Perpajakan mempersiapkan mahasiswa dengan kompetensi di bidang akuntansi dan perpajakan yang sesuai dengan kebutuhan dunia usaha dan industri.
                             </p>
@@ -32,6 +35,10 @@
                 
                         <!-- Gambar kanan -->
                         <div class="tw-w-full md:tw-w-1/2">
+                            {{-- Tambahkan Gambar pada Backend --}}
+                            {{-- @if ($tentang && $tentang->thumbnail)
+                                <img src="{{ asset('storage/' . $tentang->thumbnail) }}" alt="Akuntansi Perpajakan" class="tw-w-full tw-h-full tw-object-cover">                                
+                            @endif --}}
                             <img src="{{ asset('images/gambar/small-hero.jpg') }}" alt="Akuntansi Perpajakan" class="tw-w-full tw-h-full tw-object-cover">
                         </div>
                     </div>
