@@ -199,6 +199,14 @@
                                 </div> 
                             </div>
                             <!-- end process step item --> 
+                            <div class="tw-flex lg:tw-justify-start tw-justify-center w-100">
+                                <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
+                                    Selengkapnya
+                                    <span class="bg-orient-blue text-white">
+                                        <i class="feather icon-feather-arrow-right icon-small"></i>
+                                    </span>
+                                </a>  
+                            </div>
                         </div>  
                     </div>
                     {{-- Tambahkan foto untuk hero dibackend --}}
@@ -207,12 +215,6 @@
                             <img src="{{ asset('images/gambar/hero.jpg') }}" class="w-100 border-radius-6px" alt=""> 
                         </figure>
                     </div>
-                    <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
-                        Selengkapnya
-                        <span class="bg-orient-blue text-white">
-                            <i class="feather icon-feather-arrow-right icon-small"></i>
-                        </span>
-                    </a>  
                 </div>
             </div>
         </section>
@@ -220,36 +222,33 @@
         {{-- start section --}}
         <section class="pt-0 big-section tw-my-20">
             <div class="container">
-                <div class="row align-items-center" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
+                <div class="tw-flex tw-flex-col-reverse lg:tw-flex-row tw-items-center tw-gap-4" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'> 
                     <div class="col-xl-5 offset-xl-1 col-lg-6 text-center text-lg-start">
-                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3>
-                        {{-- @if ($pimpinanStaff && $pimpinanStaff->kata_sambutan)
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px">Kata Sambutan</h3> 
                         <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
-                            <p>{!! $pimpinanStaff->kata_sambutan !!}</p>
-                            <p class="tw-font-semibold tw-mt-6">{{ $pimpinanStaff->nama }}, {{ $pimpinanStaff->status }}</p>
-                        </div>      
-                        @endif--}}
-                        <div class="tw-space-y-4 tw-text-justify tw-text-base tw-leading-relaxed tw-w-90 lg:tw-w-95 md:tw-w-full">
+                            {{-- @if ($pimpinanStaff && $pimpinanStaff->kata_sambutan)
+                                <p>{!! $pimpinanStaff->kata_sambutan !!}</p>
+                                <p class="tw-font-semibold tw-mt-6">{{ $pimpinanStaff->nama }}, {{ $pimpinanStaff->status }}</p>
+                            @endif --}}
                             <p>Selamat datang di website resmi Program Studi Akuntansi Perpajakan. Website ini kami hadirkan sebagai media informasi dan komunikasi yang memuat berbagai hal terkait aktivitas akademik, program unggulan, serta capaian prestasi dari mahasiswa maupun dosen kami.</p>
                             <p>Program Studi Akuntansi Perpajakan hadir sebagai jawaban atas kebutuhan dunia kerja terhadap tenaga profesional yang memiliki kompetensi di bidang akuntansi dan perpajakan. Melalui kurikulum yang adaptif dan pembelajaran berbasis praktik, kami berkomitmen mencetak lulusan yang tidak hanya cakap secara akademik, namun juga siap bersaing secara profesional di era industri 4.0.</p>
-                        </div>                     
-                    </div>
-                    <div class="col-lg-6 position-relative md-my-14 sm-my-17 xs-my-23">
-                        {{-- @if ($pimpinanStaff && $pimpinanStaff->foto)
-                        <div class="w-70 md-w-75 xs-w-90 md:tw-ml-32 tw-my-10 tw-ml-6" data-animation-delay="50" data-shadow-animation="true">
-                            <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="" class=" border-radius-8px w-100">
+                            <p class="tw-font-semibold tw-mt-6">Fahrezzi, Ketua Guild</p>
                         </div>
-                        @endif --}}
-                        <div class="w-70 md-w-75 xs-w-90 md:tw-ml-32 tw-my-10 tw-ml-6" data-animation-delay="50" data-shadow-animation="true">
-                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px w-100">
+                        <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-7">
+                            Selengkapnya
+                            <span class="bg-orient-blue text-white">
+                                <i class="feather icon-feather-arrow-right icon-small"></i>
+                            </span>
+                        </a>                        
+                    </div>
+                    <div class="col-lg-6 position-relative md-mt-14 sm-mt-17 xs-mt-23"> 
+                        <div class="tw-flex tw-justify-center w-100" data-animation-delay="50">
+                            {{-- @if ($pimpinanStaff && $pimpinanStaff->foto)
+                                <img src="{{ asset('storage/' . $pimpinanStaff->foto) }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]">                                  
+                            @endif --}}
+                            <img src="{{ asset('images/gambar/alumni2.jpg') }}" alt="" class=" border-radius-8px tw-w-[100%] md:tw-w-[60%]">
                         </div>
                     </div> 
-                    <a href="#" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow tw-mt-10 lg:tw-ml-[7rem]">
-                        Selengkapnya
-                        <span class="bg-orient-blue text-white">
-                            <i class="feather icon-feather-arrow-right icon-small"></i>
-                        </span>
-                    </a>   
                 </div> 
             </div>
         </section>  
