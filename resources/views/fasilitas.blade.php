@@ -1,39 +1,46 @@
 @extends('layouts.app')
-@section('title', 'Tentang')
-
+@section('title', 'Fasilitas')
 @section('content')
-        <!-- start page title -->
-        <section class="top-space-margin page-title-big-typography cover-background" style="background-image: url({{ asset('/images/gambar/foto-tentang.jpg') }})">
-            <div class="container">
-                <div class="row extra-very-small-screen align-items-center">
-                    <div class="col-lg-5 col-sm-8 position-relative page-title-extra-small" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-30, 0], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h1 class="mb-20px text-white text-shadow-medium"><span class="w-30px h-2px bg-yellow d-inline-block align-middle position-relative top-minus-2px me-10px"></span>Tentang</h1>
-                        <h2 class="text-white text-shadow-medium fw-500 ls-minus-2px mb-0">Struktur Organisasi</h2>
+        <!-- Start Section -->
+        <section id="profil" class="mb-0 pb-0" style="margin-top: 50px;">
+            <div class="container text-center">
+                @foreach ($kampus as $item)
+                <div class="card shadow-lg border-0 rounded-3 overflow-hidden"
+                    data-anime='{ "opacity": [0,1], "translateY": [30, 0], "duration": 600, "delay":100, "easing": "easeOutQuad" }'>
+                    <div class="card-body p-4">
+                        <!-- Judul -->
+                        @if ($item->nama)
+                        <h5 class="text-dark-gray fw-700"
+                            data-anime='{ "opacity": [0,1], "translateY": [20, 0], "duration": 600, "delay":200, "easing": "easeOutQuad" }'>
+                            {!! $item->nama !!}
+                        </h5>
+                        @endif
+
+                        <div class="row align-items-center justify-content-center">
+                            @if ($item->gambar)
+                            <div class="col-lg-5 col-md-6 sm-mb-30px">
+                                <img src="{{asset ('storage/'. $item->gambar)}}" alt="" class="w-100 border-radius-6px" />
+                            </div>
+                            @endif
+                            <div class="col-lg-4 col-md-5 offset-md-1 text-center text-md-start">
+                                @if ($item->deskripsi)
+                                <p>{!! $item->deskripsi !!}</p>
+                                @endif
+                                @if ($item->alamat)
+                                <span class="d-block"><span class="text-dark-gray fw-600">Alamat:</span><a> {!! $item->alamat !!}</a></span>
+                                @endif
+                                @if ($item->nomor)
+                                <span class="d-block mb-30px"><span class="text-dark-gray fw-600">Nomor:</span> <a>{!! $item->nomor !!}</a></span>
+                                @endif
+                                <div class="col-md-7 text-center text-md-end">
+                                    <a href="{{ route('detail-fasilitas', ['id' => $item->id]) }}" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700"><span class="bg-base-color"></span>Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </section>
-        <!-- Content Section -->
-        <section class="tw-pt-16 tw-pb-20">
-            <div class="container">
-                <h2 class="tw-text-4xl tw-font-bold tw-text-primary tw-mb-10 tw-text-center">
-                    Fasilitas Prodi Akuntansi Perpajakan
-                </h2>
-                <div class="tw-flex tw-flex-wrap tw-justify-start tw-flex-col tw-border-b-4 tw-border-secondary tw-overflow-hidden md:tw-flex-row tw-relative tw-p-2">
-                    <div class="tw-w-full md:tw-w-1/2 tw-p-6 tw-flex tw-flex-col tw-justify-center">
-                        <h2 class="tw-text-3xl tw-font-bold tw-text-primary tw-mb-4">
-                            Kampus 1
-                        </h2>
-                        <p class="tw-text-base tw-text-gray-700">
-                            Program Studi Akuntansi Perpajakan mempersiapkan mahasiswa dengan kompetensi di bidang akuntansi dan perpajakan yang sesuai dengan kebutuhan dunia usaha dan industri.
-                        </p>
-                    </div>
-                    <div class="tw-full md:tw-w-1/2">
-                        <img src="{{asset('images/gambar/bandung.jpg')}}" alt="" class="tw-w-full tw-h-full tw-object-cover tw-rounded-xl">
-                    </div>
-                </div>
-
-            </div>
-        </section>        
-
+        <!-- End Section -->
 @endsection
