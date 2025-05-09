@@ -25,33 +25,30 @@
                             <h2 class="tw-text-3xl tw-font-bold tw-text-primary tw-mb-4">
                                 Bagaimana Struktur Organisasi Prodi?
                             </h2>
-                            {{-- @if ($strukturOrganisasi && $strukturOrganisasi->teks)
-                            <p class="tw-text-base tw-text-gray-700">
+                            @if ($strukturOrganisasi && $strukturOrganisasi->teks)
+                            <span class="tw-text-base tw-text-gray-700">
                                 {!! $strukturOrganisasi->teks !!}
-                            </p> 
-                            @endif --}}
-                            <p class="tw-text-base tw-text-gray-700">
-                                Program Studi Akuntansi Perpajakan mempersiapkan mahasiswa dengan kompetensi di bidang akuntansi dan perpajakan yang sesuai dengan kebutuhan dunia usaha dan industri.
-                            </p>
+                            </span> 
+                            @endif
                         </div>
                 
                         <!-- Gambar kanan -->
                         <div class="tw-w-full md:tw-w-1/2">
                                 <!-- Thumbnail Struktur -->
                             <div x-data="{ open: false }" class="tw-text-center">
-                                {{-- @if ($strukturOrganisasi && $strukturOrganisasi->foto)
+                                @if ($strukturOrganisasi && $strukturOrganisasi->foto)
                                 <img 
-                                    src="{{ asset('storage/' . $strukturOrganisasi->foto) }}') }}" 
+                                    src="{{ asset('storage/' . $strukturOrganisasi->foto)}}" 
                                     alt="Struktur Organisasi"
                                     @click="open = true"
                                     class="tw-cursor-zoom-in tw-rounded-xl tw-shadow-md tw-max-w-full tw-mx-auto"
                                 >   
-                                @endif --}}
-                                <img 
+                                @endif
+                                {{-- <img 
                                     src="{{ asset('images/gambar/small-hero.jpg') }}" 
                                     alt="Struktur Organisasi Besar"
                                     class="tw-w-full tw-rounded-lg"
-                                >
+                                > --}}
 
                                 <!-- Modal -->
                                 <div 
@@ -66,18 +63,18 @@
                                         >
                                             &times;
                                         </button>
-                                        {{-- @if ($strukturOrganisasi && $strukturOrganisasi->foto)
+                                        @if ($strukturOrganisasi && $strukturOrganisasi->foto)
                                         <img 
-                                            src="{{ asset('storage/' . $strukturOrganisasi->foto) }}') }}" 
+                                            src="{{ asset('storage/' . $strukturOrganisasi->foto) }}" 
                                             alt="Struktur Organisasi Besar"
                                             class="tw-w-full tw-rounded-lg"
                                         >   
-                                        @endif --}}
-                                        <img 
+                                        @endif
+                                        {{-- <img 
                                             src="{{ asset('images/gambar/small-hero.jpg') }}" 
                                             alt="Struktur Organisasi Besar"
                                             class="tw-w-full tw-rounded-lg"
-                                        >
+                                        > --}}
                                     </div>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@ class VisiMisiTujuanController extends Controller
 {
     public function index()
     {
-        $visiMisiTujuan = VisiMisiTujuan::all();
+        $visiMisiTujuan = VisiMisiTujuan::first();
         
         return view('visi-misi-tujuan', compact('visiMisiTujuan'));
     }

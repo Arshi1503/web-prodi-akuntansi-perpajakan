@@ -21,16 +21,16 @@
                     
                     <div class="tw-bg-white tw-shadow-xl tw-rounded-2xl tw-overflow-hidden tw-flex tw-flex-col md:tw-flex-row tw-relative tw-z-10">
                         <!-- Content kiri -->
-                        <div class="tw-w-full md:tw-w-1/2 tw-p-6 tw-flex tw-flex-col tw-justify-center">
-                            <h2 class="tw-text-3xl tw-font-bold tw-text-primary tw-mb-4">
+                        <div class="tw-w-full md:tw-w-1/2 tw-p-6 tw-flex tw-flex-col tw-justify-start">
+                            <h2 class="tw-text-3xl tw-font-bold tw-text-primary">
                                 Apa itu Akuntansi Perpajakan?
                             </h2>
-                            {{-- @if ($tentang && $tentang->deskripsi)
-                                <p class="tw-text-base tw-text-gray-700">{!! $tentang->deskripsi !!}"></p>
-                            @endif --}}
-                            <p class="tw-text-base tw-text-gray-700">
+                            @if ($tentang && $tentang->deskripsi)
+                                <span class="tw-text-base tw-text-gray-700">{!! $tentang->deskripsi !!}</span>
+                            @endif
+                            {{-- <p class="tw-text-base tw-text-gray-700">
                                 Program Studi Akuntansi Perpajakan mempersiapkan mahasiswa dengan kompetensi di bidang akuntansi dan perpajakan yang sesuai dengan kebutuhan dunia usaha dan industri.
-                            </p>
+                            </p> --}}
                         </div>
                 
                         <!-- Gambar kanan -->

@@ -7,6 +7,7 @@ use App\Models\Tentang;
 use App\Models\VisiMisiTujuan;
 use App\Models\PimpinanStaff;
 use App\Models\Publikasi;
+use App\Models\TestimoniAlumni;
 
 class BerandaController extends Controller
 {
@@ -16,7 +17,8 @@ class BerandaController extends Controller
         $visiMisiTujuan = VisiMisiTujuan::first();
         $pimpinanStaff = PimpinanStaff::first();
         $publikasi = Publikasi::all();
+        $testimoniAlumni= TestimoniAlumni::all();
         
-        return view('home', compact('tentang', 'visiMisiTujuan', 'pimpinanStaff', 'publikasi'));
+        return view('home', compact('tentang', 'visiMisiTujuan', 'pimpinanStaff', 'publikasi', 'testimoniAlumni'));
     }
 }

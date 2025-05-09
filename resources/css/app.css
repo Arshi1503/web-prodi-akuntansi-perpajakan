@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base{
-    ul{
-        list-style: disc;
+    ol{
+        list-style: decimal;
     }
 }
