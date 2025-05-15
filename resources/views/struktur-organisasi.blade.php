@@ -1,60 +1,40 @@
 @extends('layouts.app')
-@section('title', 'Tentang')
-
+@section('title', 'Struktur Organisasi')
 @section('content')
-        <!-- start page title -->
-        <section class="top-space-margin page-title-big-typography cover-background" style="background-image: url({{ asset('/images/gambar/foto-tentang.jpg') }})">
-            <div class="container">
-                <div class="row extra-very-small-screen align-items-center">
-                    <div class="col-lg-5 col-sm-8 position-relative page-title-extra-small" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-30, 0], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h1 class="mb-20px text-white text-shadow-medium"><span class="w-30px h-2px bg-yellow d-inline-block align-middle position-relative top-minus-2px me-10px"></span>Tentang</h1>
-                        <h2 class="text-white text-shadow-medium fw-500 ls-minus-2px mb-0">Struktur Organisasi</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Content Section -->
-        <section class="tw-pt-16 tw-pb-20">
-            <div class="container">
-                <div class="tw-relative tw-mb-10">
-                    <div class="tw-absolute tw-inset-0 tw-rounded-2xl tw-border-[3px] tw-border-secondary tw-translate-x-2 tw-translate-y-2 tw-z-0 tw-bg-secondary"></div>
-                    
-                    <div class="tw-bg-white tw-shadow-xl tw-rounded-2xl tw-overflow-hidden tw-flex tw-flex-col md:tw-flex-row tw-relative tw-z-10">
-                        <!-- Content kiri -->
-                        <div class="tw-w-full md:tw-w-1/2 tw-p-6 tw-flex tw-flex-col tw-justify-center">
-                            <h2 class="tw-text-3xl tw-font-bold tw-text-primary tw-mb-4">
-                                Bagaimana Struktur Organisasi Prodi?
-                            </h2>
-                            @if ($strukturOrganisasi && $strukturOrganisasi->teks)
-                            <span class="tw-text-base tw-text-gray-700">
-                                {!! $strukturOrganisasi->teks !!}
-                            </span> 
-                            @endif
-                        </div>
-                
-                        <!-- Gambar kanan -->
-                        <div class="tw-w-full md:tw-w-1/2">
-                                <!-- Thumbnail Struktur -->
-                            <div x-data="{ open: false }" class="tw-text-center">
-                                @if ($strukturOrganisasi && $strukturOrganisasi->foto)
-                                <img 
-                                    src="{{ asset('storage/' . $strukturOrganisasi->foto)}}" 
-                                    alt="Struktur Organisasi"
-                                    @click="open = true"
-                                    class="tw-cursor-zoom-in tw-rounded-xl tw-shadow-md tw-max-w-full tw-mx-auto"
-                                >   
-                                @endif
-                                {{-- <img 
-                                    src="{{ asset('images/gambar/small-hero.jpg') }}" 
-                                    alt="Struktur Organisasi Besar"
-                                    class="tw-w-full tw-rounded-lg"
-                                > --}}
+        <!-- Start Section -->
+        <section id="kurikulum" class="tw-mb-[50px] pb-0" style="margin-top: 50px;">
+            <div class="container text-center">
+                <div class="card shadow-lg border-0 rounded-3"
+                    data-anime='{ "el": "childs", "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="card-body p-4">
+                        <!-- Judul dengan animasi fade-in -->
+                        <h5 class="text-dark-gray fw-700" 
+                            data-anime='{ "translateY": [20, 0], "opacity": [0,1], "duration": 800, "delay": 200, "easing": "easeOutQuad" }'>
+                            Struktur Organisasi
+                        </h5>
 
-                                <!-- Modal -->
-                                <div 
+                        <!-- Paragraf dengan animasi fade-in dan slide-up -->
+                        @if ($strukturOrganisasi && $strukturOrganisasi->teks)
+                        <p class="w-80 xl-w-90 lg-w-100 mx-auto text-muted fs-15"
+                        style="text-align: justify;"
+                        data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 400, "easing": "easeOutQuad" }'>
+                            {!! $strukturOrganisasi->teks !!}
+                        </p>
+                        @endif
+
+                        @if ($strukturOrganisasi && $strukturOrganisasi->foto)
+                        <div x-data="{ open: false }" class="d-flex justify-content-center align-items-center tw-w-full tw-relative" 
+                            data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "delay":50}'>
+                            <img 
+                            class="w-50" 
+                            src="{{ asset('storage/' . $strukturOrganisasi->foto) }}" 
+                            alt=""
+                            @click="open = true">
+
+                            <div 
                                     x-show="open" 
                                     @click.away="open = false" 
-                                    class="tw-fixed tw-inset-0 tw-bg-black/70 tw-flex tw-items-center tw-justify-center tw-z-50"
+                                    class="tw-fixed tw-inset-0 tw-bg-black/70 tw-flex tw-items-center tw-justify-center tw-z-[9999]"
                                 >
                                     <div class="tw-bg-white tw-p-4 tw-rounded-xl tw-relative tw-max-w-4xl tw-w-full">
                                         <button 
@@ -76,15 +56,13 @@
                                             class="tw-w-full tw-rounded-lg"
                                         > --}}
                                     </div>
-                                </div>
                             </div>
-
                         </div>
+                        @endif
                     </div>
                 </div>
-                
-                
             </div>
         </section>
-
+        <!-- End Section -->
+        <!-- start footer -->
 @endsection

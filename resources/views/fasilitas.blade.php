@@ -3,7 +3,7 @@
 @section('content')
         <!-- Start Section -->
         <section id="profil" class="mb-0 pb-0" style="margin-top: 50px;">
-            <div class="container text-center">
+            <div class="container text-center tw-space-y-10 tw-mb-10">
                 @foreach ($kampus as $item)
                 <div class="card shadow-lg border-0 rounded-3 overflow-hidden"
                     data-anime='{ "opacity": [0,1], "translateY": [30, 0], "duration": 600, "delay":100, "easing": "easeOutQuad" }'>
@@ -32,9 +32,12 @@
                                 @if ($item->nomor)
                                 <span class="d-block mb-30px"><span class="text-dark-gray fw-600">Nomor:</span> <a>{!! $item->nomor !!}</a></span>
                                 @endif
-                                <div class="col-md-7 text-center text-md-end">
-                                    <a href="{{ route('detail-fasilitas', ['id' => $item->id]) }}" class="btn btn-large btn-expand-ltr text-dark-gray btn-rounded fw-700"><span class="bg-base-color"></span>Lihat Selengkapnya</a>
-                                </div>
+                                <a href="{{ route('detail-fasilitas', ['id' => $item->id]) }}" class="btn btn-large btn-rounded with-rounded btn-base-color btn-round-edge btn-box-shadow">
+                                    Selengkapnya
+                                    <span class="bg-orient-blue text-white">
+                                        <i class="feather icon-feather-arrow-right icon-small"></i>
+                                    </span>
+                                </a> 
                             </div>
                         </div>
                     </div>

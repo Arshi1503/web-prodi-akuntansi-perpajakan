@@ -129,5 +129,6 @@
                 <p>Data statistik kutipan tidak tersedia.</p>
             @endisset
         </div>
+        </div>
         <!-- end section -->
 @endsection

@@ -25,7 +25,10 @@
     </head>
 
 <body data-mobile-nav-style="classic">
-    <div id="preloader" class="tw-fixed tw-inset-0 tw-bg-white tw-z-50 tw-flex tw-items-center tw-justify-center">
+    @php
+        $isHome = Request::is('/');
+    @endphp
+        <div id="preloader" class="tw-fixed tw-inset-0 tw-bg-white tw-z-50 tw-flex tw-items-center tw-justify-center">
         <svg class="tw-w-12 tw-h-12 tw-text-soft tw-animate-spin" viewBox="0 0 64 64" fill="none"
          xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path
@@ -38,11 +41,11 @@
         </svg>
     </div>
     
-    @include('partials.navbar')
     <main class="tw-opacity-0 tw-transition-opacity tw-duration-300">
+        @include('partials.navbar')
         @yield('content')
+        @include('partials.footer')
     </main>
-    @include('partials.footer')
 
 
      <!-- start scroll progress -->
